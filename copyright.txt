@@ -1,0 +1,17 @@
+Copyright © 2024-2026 ChristopherPatrickCotton. All rights reserved.
+
+Free for personal use. Please don't redistribute or sell it, and please
+don't remove the source tracking (the origin and attribution info) from
+the files or data. It helps keep things traceable, and I'd appreciate it
+being left in place.
+
+This software is provided "as is", without warranty of any kind. To the
+extent permitted by law, I'm not liable for any loss or damage arising
+from its use, so use it at your own risk and keep backups of your data.
+
+Thanks to the people who build the languages, libraries, databases,
+operating systems and tools that make software like this possible, and
+to everyone who shares their work and knowledge so others can build on it.
+
+I build and maintain these apps independently, and I need funding to keep
+going. If you'd like to help support the work, please get in touch.
