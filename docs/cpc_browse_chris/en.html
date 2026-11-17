@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse Chris - Explorer</title>
+
+<style>
+:root{--bg:#f3f6fb;--ink:#17212f;--muted:#5b6b80;--card:#ffffffcc;--line:#dbe4f0;--a1:#2563eb;--a2:#7c3aed;--shadow:0 10px 30px #1e3a8a1a}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1320;--ink:#e8eef9;--muted:#9fb0c8;--card:#16203299;--line:#263349;--shadow:0 10px 30px #0008}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--ink);
+ background:radial-gradient(1200px 500px at 10% -10%,#2563eb22,transparent),radial-gradient(900px 500px at 100% 0,#7c3aed22,transparent),var(--bg)}
+a{color:var(--a1);text-decoration:none}a:hover{text-decoration:underline}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 28px;position:sticky;top:0;z-index:5;
+ backdrop-filter:blur(12px);background:var(--card);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink)}
+.brand img{height:46px;width:auto;border-radius:10px;display:block}
+.brand span{font-size:.95rem;letter-spacing:.02em;color:var(--muted)}
+.lang{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.9rem}
+.lang select,.controls input,.controls select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px}
+.wrap{max-width:1100px;margin:0 auto;padding:30px 22px 60px}
+.hero{padding:38px 34px;border-radius:22px;color:#fff;box-shadow:var(--shadow);background:linear-gradient(135deg,#1d4ed8,#7c3aed 60%,#db2777)}
+.hero h1{margin:0 0 6px;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15}
+.pill{display:inline-block;margin:0 8px 14px 0;padding:3px 12px;border-radius:99px;background:#ffffff2e;font-size:.85rem}
+.hero p{max-width:760px;margin:.4rem 0}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.links a{padding:10px 18px;border-radius:12px;background:#fff;color:#1e3a8a;font-weight:600;box-shadow:0 4px 14px #0003;transition:.15s}
+.links a:hover{transform:translateY(-2px);text-decoration:none}
+.panel{margin-top:26px;padding:26px 28px;border-radius:20px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+.panel h2{margin:0 0 12px;font-size:1.25rem}
+.panel h2::after{content:"";display:block;width:46px;height:3px;margin-top:6px;border-radius:3px;background:linear-gradient(90deg,var(--a1),var(--a2))}
+.panel ul{padding-left:1.2rem}.panel li{margin:.25rem 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.cols .panel{margin-top:26px}
+.posters,.gallery,.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.posters a,.gallery figure{display:block;margin:0;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--bg);transition:.2s}
+.posters a:hover,.gallery figure:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.posters img,.gallery img{display:block;width:100%;height:auto;max-height:340px;object-fit:contain}
+figcaption{padding:10px 12px;font-size:.88rem;color:var(--muted)}
+.langtext{white-space:normal}.langtext pre{overflow:auto;padding:12px;border-radius:10px;background:var(--bg)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0}
+</style>
+</head><body>
+<header class="top">
+  <a class="brand" href="https://bmulti.github.io/Portfolio/" title="Application catalogue">
+    <img src="logo.png" alt="">
+    <span>Application catalogue</span>
+  </a>
+  <div class="lang"><label for="doclang">Language</label><select id="doclang"><option value="en" selected>English</option></select></div>
+</header>
+<div class="wrap">
+  <section class="hero">
+    <h1>Browse Chris - Explorer</h1>
+    <span class="pill">Utilities</span><span class="pill">v5.4.3</span>
+    <p>Source File Checker Browser</p>
+    <div class="links">
+      <a href="https://github.com/bmulti/Browse_Chris_Python_Explorer">GitHub repository</a>
+      
+      
+      
+    </div>
+  </section>
+
+  
+
+  
+  <section class="panel"><h2>About this application</h2>
+    <div id="langtexts"><div class="langtext" data-lang="en"><p>Browse Chris finds files in a folder, helps you inspect their contents, and lets<br>you open, run, copy or back up a selected file. Python files also show their<br>description, application name, version and principal class when that information<br>can be read from the source. Scanning reads files; it does not run their code.</p>
+<p>Start by opening Browse, choosing a folder and pressing Scan. Select a result to<br>inspect it in Preview. Set your usual folders and scan options in Config, then<br>press Save Config. Click any Notes heading to open its corresponding tab.</p>
+<div class="tabs"><div class="tabbar" role="tablist"><button type="button" class="tabbtn" role="tab" data-for="en-tab-browse" aria-selected="true" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">Browse</button><button type="button" class="tabbtn" role="tab" data-for="en-tab-preview" aria-selected="false" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">Preview</button><button type="button" class="tabbtn" role="tab" data-for="en-tab-html-publish" aria-selected="false" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">Html publish</button><button type="button" class="tabbtn" role="tab" data-for="en-tab-config" aria-selected="false" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">Config</button><button type="button" class="tabbtn" role="tab" data-for="en-tab-ui-choices" aria-selected="false" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">Ui choices</button><button type="button" class="tabbtn" role="tab" data-for="en-tab-about" aria-selected="false" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">About</button><button type="button" class="tabbtn" role="tab" data-for="en-tab-gateway" aria-selected="false" onclick="var r=this.closest('.langtext'),i=this.dataset.for;r.querySelectorAll('.tabpanel').forEach(function(p){p.hidden=p.id!==i});r.querySelectorAll('.tabbtn').forEach(function(b){b.setAttribute('aria-selected',b===this?'true':'false')},this)">Gateway</button></div><div class="tabpanel" id="en-tab-browse" role="tabpanel"><p>Choose the folder to inspect using Browse or the folder box, then press Scan.<br>Up moves to its parent folder. Scanning stays within the chosen folder; Include<br>subfolders extends it to folders beneath that location. Scanning runs in the<br>background, so the window stays usable; the window title and status line show<br>Scanning... until the table is filled.</p>
+<p>Type limits the results to one file extension, or All files. Modified limits<br>results by modification date. Prefix keeps filenames beginning with the text<br>you enter. Search matches filenames, paths and the source information shown in<br>the table. Press Enter after changing Prefix or Search. Reset Filters removes<br>those restrictions. The status line explains how many files were shown and how<br>many were excluded by each filter.</p>
+<p>Select a result to see its full path. Run / Open runs Python scripts and opens<br>other files in their normal application; use it only when you intend to launch<br>the selected file. Open Natively uses the operating system's file association.<br>Backup Selected copies the file to your configured backup folder. Copy To lets<br>you choose a destination. Open Folder opens the selected file's folder.</p>
+<p>The Selected Python file preview runs across the bottom of the page, below the<br>buttons, and takes about one third of the height. Drag the divider above it to<br>change the split. Publishing the file list is on the HTML Publish tab.</p></div><div class="tabpanel" id="en-tab-preview" role="tabpanel" hidden><p>Select a file in Browse, then open Preview to read it. Python and supported<br>source files use syntax colouring. Preview shows filename, size and modification<br>information. It is read-only: editing and saving source files are not provided<br>here. Large text files are shortened for display. Binary files show information<br>instead of unreadable contents. Refresh Preview reloads a file changed outside<br>the app.</p></div><div class="tabpanel" id="en-tab-html-publish" role="tabpanel" hidden><p>The two headings at the top show the Selected folder and Selected file chosen in<br>Browse. They follow Browse as you change them.</p>
+<p>The Publish panel exports the displayed Browse file list. Set the page title,<br>Named, Document and the publish folder, then press Publish Page or Publish +<br>Update Index. Selected rows only limits publishing to the rows selected in Browse.<br>Open Index opens the published index; Open Publish Folder opens the folder.</p>
+<p>The list on the right shows the files in the publish folder (this folder only,<br>not subfolders), newest first. Click a column heading to sort. Double-click a<br>file, or select it and press Open, to open it in its normal application. Refresh<br>List reloads the folder; it also reloads when you open this tab and after each<br>publish.</p></div><div class="tabpanel" id="en-tab-config" role="tabpanel" hidden><p>Set the default scan folder, backup folder and HTML publish folder. Choose the<br>file type, modification period, subfolder option and filename prefix you normally<br>use. These controls share their values with Browse.</p>
+<p>Press Save Config at the top of the page. A message beside the button confirms<br>that browse_chris.json was saved. Those folders and options are restored the<br>next time Browse Chris opens. The settings area scrolls in a smaller window;<br>the save button stays visible above it.</p>
+<p>Scan Folder scans using the current settings. Open Scan Folder and Open Backup<br>Folder open those locations. Browse File + Backup lets you choose a file to copy<br>to the backup folder. Quick HTML Export exports the current file table. Scan<br>errors, including a missing folder, appear in the Browse status line. Choose a<br>folder before scanning; a blank location is not used as a working folder.</p>
+<p>The companion Browse_Chris.libraries.json settings file lists the shared-library<br>locations the app is allowed to use. Adjust it if the shared library moves. It<br>does not expand the folder selected for file scanning.</p></div><div class="tabpanel" id="en-tab-ui-choices" role="tabpanel" hidden><p>Choose a colour theme, spacing, text appearance and window size. These settings<br>control how the app looks. File locations and scan options belong in Config.</p></div><div class="tabpanel" id="en-tab-about" role="tabpanel" hidden><p>Read the application's name, version, source identity and support information.</p></div><div class="tabpanel" id="en-tab-gateway" role="tabpanel" hidden><p>Use the shared launcher to find and open registered applications, files, folders<br>and links. Gateway is separate from the folder scan in Browse Chris.</p>
+<p>[footer]<br><a href="http://mrbmulti.com">Mr Bmulti</a><br><a href="https://githum/mrBmulti">GitHub</a></p></div></div></div></div>
+  </section>
+  
+
+  
+
+  <div class="cols">
+    <section class="panel"><h2>Technology</h2><p>Python / Tkinter</p></section>
+    <section class="panel"><h2>System requirements</h2><p>Windows 10 or newer</p></section>
+    <section class="panel"><h2>Installation</h2><p>Download the ZIP release, extract it, and run the application.</p></section>
+  </div>
+
+  
+</div>
+<footer>Published with CPC GitHub Publisher</footer>
+<script>
+var sel=document.getElementById("doclang");
+if(sel){sel.addEventListener("change",function(){
+  document.querySelectorAll(".langtext").forEach(function(d){d.hidden=(d.dataset.lang!==sel.value);});
+  document.documentElement.lang=sel.value;});}
+</script>
+<script id="cpc-language-hook">(function(){var picker=Array.from(document.querySelectorAll("select")).find(function(s){return Array.from(s.options).some(function(o){return o.value==="en"})});if(!picker)return;function change(){document.querySelectorAll(".langtext").forEach(function(n){var show=n.dataset.lang===picker.value;n.hidden=!show;n.style.display=show?"":"none"})}picker.addEventListener("change",change);change()})();</script></body></html>
